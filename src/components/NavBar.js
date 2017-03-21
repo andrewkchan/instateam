@@ -19,7 +19,7 @@ class NavBar extends Component {
                         route={{ path: ["team"] }}
                     >
                         <div className="navbar-logo-icon">
-                            <i className="icon ion-ios-home" />
+                            <i className="icon ion-android-home" />
                         </div>
                         <div className="navbar-logo-text">
                             instateam

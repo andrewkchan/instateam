@@ -82,6 +82,7 @@ class UpdateTeamMember extends Component {
                     member={this.state}
                     onChange={this.onChange.bind(this)}
                 />
+                {this.renderSubmit()}
             </div>
         );
     }

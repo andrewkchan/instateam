@@ -1,8 +1,16 @@
 import * as types from "../constants/ActionTypes";
 
 const initialState = {
-    nextId: 0,
-    members: {}
+    nextId: 1,
+    members: {
+        0: {
+            firstName: "Andrew",
+            lastName: "Chan",
+            email: "andrewkchan@berkeley.edu",
+            phone: "2018879070",
+            role: "Master of Da Beats"
+        }
+    }
 }
 
 export default function team(state = initialState, action) {
@@ -10,7 +18,7 @@ export default function team(state = initialState, action) {
         case types.CREATE_TEAM_MEMBER:
             return {
                 ...state,
-                nextId: (nextId + 1),
+                nextId: (state.nextId + 1),
                 members: { ...state.members, [state.nextId]: action.member }
             };
         case types.UPDATE_TEAM_MEMBER:

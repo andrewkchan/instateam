@@ -30,6 +30,17 @@ canvas {
 	user-select: none;
 	list-style: none;
 	position: relative;
+	color: #555459;
+}
+
+a {
+	&.important {
+		font-weight: 500;
+		color: #2C2D30;
+	}
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 @import "utils/utils";
@@ -41,3 +52,7 @@ canvas {
 
 
 @import "components/fluidinput";
+@import "components/btn";
+
+@import "components/teammembercard";
+@import "components/teammemberdetails";

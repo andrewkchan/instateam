@@ -17,6 +17,10 @@ class TeamViewerContainer extends Component {
         return (
             <div className="container">
                 <div className="team-header">
+                    <div className="team-header-text">
+                        <h1>Team Members</h1>
+                        {`You have ${memberIds.length} team members.`}
+                    </div>
                     <Link
                         className="team-header-add-container"
                         dispatch={dispatch}
@@ -27,10 +31,6 @@ class TeamViewerContainer extends Component {
                             <i className="icon ion-plus" />
                         </div>
                     </Link>
-                    <div className="team-header-text">
-                        <h1>Team Members</h1>
-                        {`You have ${memberIds.length} team members.`}
-                    </div>
                 </div>
                 <TeamMemberList
                     dispatch={dispatch}

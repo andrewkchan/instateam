@@ -24,12 +24,11 @@ class TeamMemberDetails extends Component {
     }
     render() {
         const { member } = this.props;
-        console.log(member);
         const { firstName, lastName, role, phone, email } = member;
         return (
             <div className="member-details-container">
                 <div className="member-details-info">
-                    <div className="member-details-info-header">
+                    <div className="member-details-info member-details-header">
                         info
                     </div>
                     <div className="member-details-info-form">
@@ -64,7 +63,7 @@ class TeamMemberDetails extends Component {
                     </div>
                 </div>
                 <div className="member-details-role">
-                    <div className="member-details-role-header">
+                    <div className="member-details-role member-details-header">
                         role
                     </div>
                     <div className="member-details-role-form">

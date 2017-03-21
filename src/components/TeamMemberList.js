@@ -15,6 +15,7 @@ class TeamMemberList extends Component {
             const member = members[memberId];
             return (
                 <TeamMemberCard
+                    key={memberId}
                     dispatch={dispatch}
                     memberId={memberId}
                     member={member}
