@@ -13,11 +13,11 @@ The mini card containing immediate info when viewing a team member in the list o
 */
 class TeamMemberCard extends Component {
     prettyPrintPhone(phone) {
-        return `${phone.substring(0,3)}-${phone.substring(3,6)}-${phone.substring(6,9)}`;
+        return `${phone.substring(0,3)}-${phone.substring(3,6)}-${phone.substring(6,10)}`;
     }
     render() {
         const { dispatch, member, memberId } = this.props;
-        const { firstName, lastName, role, phone, email } = member;
+        const { firstName, lastName, isAdmin, phone, email } = member;
         return (
             <div className="member-card">
                 <Link
@@ -29,19 +29,19 @@ class TeamMemberCard extends Component {
                     </div>
                 </Link>
                 <div className="member-card-info">
-                    <div className="member-card-info_title">
+                    <div className="member-card-info-section section-title">
                         <Link
                             className="important"
                             dispatch={dispatch}
                             route={{ path: ["members", memberId]}}
                         >
-                            {`${firstName} ${lastName} (${role})`}
+                            {`${firstName} ${lastName} ${isAdmin ? "(admin)" : ""}`}
                         </Link>
                     </div>
-                    <div className="member-card-info_phone">
+                    <div className="member-card-info-section section-phone">
                         {this.prettyPrintPhone(phone)}
                     </div>
-                    <div className="member-card-info_email">
+                    <div className="member-card-info-section section-email">
                         <a href={`mailto:${email}`} title={`Email ${firstName}`}>{email}</a>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
 import TeamMemberDetails from "../components/TeamMemberDetails";
-
+import Link from "../components/Link";
 import { createTeamMember, updateTeamMember, deleteTeamMember } from "../actions/TeamActions";
 
 const propTypes = {
@@ -35,7 +35,7 @@ class UpdateTeamMember extends Component {
         }
     }
     renderHeader() {
-        const { memberId } = this.props;
+        const { memberId, dispatch } = this.props;
         if (memberId !== "new") {
             return (
                 <div className="update-member-header">
@@ -43,6 +43,16 @@ class UpdateTeamMember extends Component {
                         <h1>Edit Team Member</h1>
                         Edit contact info, location, and role.
                     </div>
+                    <Link
+                        className="member-header-exit-container"
+                        dispatch={dispatch}
+                        route={{ path: ["team"] }}
+                        title={"Cancel"}
+                    >
+                        <div className="member-header-exit-icon">
+                            <i className="icon ion-close" />
+                        </div>
+                    </Link>
                 </div>
             );
         }
@@ -52,6 +62,16 @@ class UpdateTeamMember extends Component {
                     <h1>Add Team Member</h1>
                     Set email, location, and role.
                 </div>
+                <Link
+                    className="member-header-exit-container"
+                    dispatch={dispatch}
+                    route={{ path: ["team"] }}
+                    title={"Cancel"}
+                >
+                    <div className="member-header-exit-icon">
+                        <i className="icon ion-close" />
+                    </div>
+                </Link>
             </div>
         );
     }

@@ -30,6 +30,9 @@ class App extends Component {
                 return (<TeamViewerContainer />);
             case "members":
                 const { team } = this.props;
+                if (query && query.s) {
+                    
+                }
                 if (path.length > 1) {
                     let member = team.members[path[1]];
                     member = member ? member : {};

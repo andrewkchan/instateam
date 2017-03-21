@@ -13,19 +13,18 @@ class NavBar extends Component {
         const { dispatch } = this.props;
         return (
             <div className="navbar">
-                <div className="navbar-logo-container">
-                    <Link
-                        dispatch={dispatch}
-                        route={{ path: ["team"] }}
-                    >
-                        <div className="navbar-logo-icon">
-                            <i className="icon ion-android-home" />
-                        </div>
-                        <div className="navbar-logo-text">
-                            instateam
-                        </div>
-                    </Link>
-                </div>
+                <Link
+                    className="navbar-logo-container"
+                    dispatch={dispatch}
+                    route={{ path: ["team"] }}
+                >
+                    <div className="navbar-logo-icon">
+                        <i className="icon ion-android-home" />
+                    </div>
+                    <div className="navbar-logo-text">
+                        instateam
+                    </div>
+                </Link>
             </div>
         );
     }

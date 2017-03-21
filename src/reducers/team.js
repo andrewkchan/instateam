@@ -8,7 +8,7 @@ const initialState = {
             lastName: "Chan",
             email: "andrewkchan@berkeley.edu",
             phone: "2018879070",
-            role: "Master of Da Beats"
+            isAdmin: true
         }
     }
 }

@@ -23,8 +23,8 @@ class TeamMemberDetails extends Component {
         });
     }
     render() {
-        const { member } = this.props;
-        const { firstName, lastName, role, phone, email } = member;
+        const { member, onChange } = this.props;
+        const { firstName, lastName, isAdmin, phone, email } = member;
         return (
             <div className="member-details-container">
                 <div className="member-details-info">
@@ -66,7 +66,27 @@ class TeamMemberDetails extends Component {
                     <div className="member-details-role member-details-header">
                         role
                     </div>
-                    <div className="member-details-role-form">
+                    <div className="member-details-role member-details-role-form">
+                        <div className={`${isAdmin ? "role-section" : "role-section role-section-active"}`}>
+                            <label className="role-section-label">{"Regular - Can't Delete Members"}</label>
+                            <input
+                                type="radio"
+                                id="isAdmin"
+                                name="isAdmin"
+                                value="regular"
+                                checked={!isAdmin}
+                                onChange={() => { onChange({ isAdmin: false }); }} />
+                        </div>
+                        <div className={`${isAdmin ? "role-section role-section-active" : "role-section"}`}>
+                            <label className="role-section-label">{"Admin - Can Delete Members"}</label>
+                            <input
+                                type="radio"
+                                id="isAdmin"
+                                name="isAdmin"
+                                value="admin"
+                                checked={isAdmin}
+                                onChange={() => { onChange({ isAdmin: true }); }}/>
+                        </div>
                     </div>
                 </div>
             </div>

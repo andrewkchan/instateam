@@ -1,9 +1,31 @@
 .navbar {
     width: 100%;
-    min-height: 60px;
+    height: 60px;
     box-shadow: $container-shadow;
     position: fixed;
     z-index: 3;
     background-color: #fff;
     top: 0;
+}
+
+a.navbar-logo-container {
+    @include flex(center, flex-start);
+    @include size();
+    padding-left: 20px;
+
+    :hover {
+        text-decoration: none;
+        color: $blue-link;
+    }
+}
+
+.navbar-logo-icon {
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.navbar-logo-text {
+    font-weight: 500;
+    font-size: 22px;
+    //letter-spacing: 0.5px;
 }

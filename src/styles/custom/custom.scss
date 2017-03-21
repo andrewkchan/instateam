@@ -37,9 +37,9 @@ a {
 	&.important {
 		font-weight: 500;
 		color: #2C2D30;
-	}
-	&:hover {
-		text-decoration: underline;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
 
@@ -56,3 +56,4 @@ a {
 
 @import "components/teammembercard";
 @import "components/teammemberdetails";
+@import "components/updatemember";

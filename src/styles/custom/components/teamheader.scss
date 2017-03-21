@@ -10,3 +10,24 @@
         top: 8px;
     }
 }
+
+.team-search {
+    &-container {
+        @include border-radius(5px, 5px, 5px, 5px);
+        background-color: $deepBlue-5;
+        margin: 25px 0;
+        @include size(250px, 45px);
+        position: relative;
+        @include flex(center, flex-start);
+    }
+    &-icon {
+        margin-right: 0.3em;
+        margin-left: 0.3em;
+        font-size: 1.2em;
+    }
+    &-input {
+        @include size();
+        outline: none;
+        font-size: 1.1em;
+    }
+}
