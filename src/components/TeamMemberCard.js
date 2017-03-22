@@ -17,16 +17,27 @@ class TeamMemberCard extends Component {
     }
     render() {
         const { dispatch, member, memberId } = this.props;
-        const { firstName, lastName, isAdmin, phone, email } = member;
+        const { firstName, lastName, isAdmin, phone, email, img } = member;
+        let picture;
+        if (img) {
+            picture = (
+                <div className="member-card-thumbnail" style={{ backgroundImage: `url(${img})`, backgroundSize: "cover" }}>
+                </div>
+            );
+        } else {
+            picture = (
+                <div className="member-card-thumbnail">
+                    <i className="icon ion-android-person" />
+                </div>
+            );
+        }
         return (
             <div className="member-card">
                 <Link
                     dispatch={dispatch}
                     route={{ path: ["members", memberId]}}
                 >
-                    <div className="member-card-thumbnail">
-                        <i className="icon ion-android-person" />
-                    </div>
+                    {picture}
                 </Link>
                 <div className="member-card-info">
                     <div className="member-card-info-section section-title">

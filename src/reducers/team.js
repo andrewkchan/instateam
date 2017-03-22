@@ -1,16 +1,8 @@
 import * as types from "../constants/ActionTypes";
 
 const initialState = {
-    nextId: 1,
-    members: {
-        0: {
-            firstName: "Andrew",
-            lastName: "Chan",
-            email: "andrewkchan@berkeley.edu",
-            phone: "2018879070",
-            isAdmin: true
-        }
-    }
+    nextId: 0,
+    members: {}
 }
 
 export default function team(state = initialState, action) {

@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from "react";
 import { navigateHome } from "../actions/NavActions";
 
 import Link from "../components/Link";
+import { populateTeam } from "../actions/TeamActions";
 
 const propTypes = {
     dispatch: PropTypes.func.isRequired,
@@ -25,6 +26,9 @@ class NavBar extends Component {
                         instateam
                     </div>
                 </Link>
+                <div className="populate-team" onClick={() => { dispatch(populateTeam()); }}>
+                    <i className="icon ion-android-contacts" />
+                </div>
             </div>
         );
     }

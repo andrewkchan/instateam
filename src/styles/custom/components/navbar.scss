@@ -6,6 +6,7 @@
     z-index: 3;
     background-color: #fff;
     top: 0;
+    @include flex(center, space-between);
 }
 
 a.navbar-logo-container {
@@ -28,4 +29,10 @@ a.navbar-logo-container {
     font-weight: 500;
     font-size: 22px;
     //letter-spacing: 0.5px;
+}
+
+.populate-team {
+    font-size: 40px;
+    cursor: pointer;
+    margin-right: 20px;
 }
