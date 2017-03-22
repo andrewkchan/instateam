@@ -1,5 +1,7 @@
 # instateam
 
+The coolest team member management app made by the coolest person ever. Only cool teams may qualify to use this app.
+
 By Andrew Chan
 
 ## Quick start
