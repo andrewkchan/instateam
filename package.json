@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production webpack -p --config ./webpack.prod.config.js",
     "lint": "eslint scripts",
     "start": "webpack-dev-server --progress --colors --hot --content-base ./public --config ./webpack.config.js",
-    "test": "mocha --compilers js:babel-core/register --recursive -r"
+    "test": "mocha --compilers js:babel-core/register --recursive"
   },
   "repository": {
     "type": "git",
